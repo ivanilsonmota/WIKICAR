@@ -1,5 +1,14 @@
 package br.com.wikicar;
 
-public class Main {
+import br.com.wikicar.dao.Dao;
+import br.com.wikicar.entities.Car;
 
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Car c = new Car();
+		Dao<Car> daoCar = new Dao<Car>();
+		
+	}
 }

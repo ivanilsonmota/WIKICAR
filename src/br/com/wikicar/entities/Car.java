@@ -8,12 +8,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="carro")
-public class Car implements BaseEntity {
+@Table(name="tb_car")
+public class Car extends Veiculo implements BaseEntity {
 	
 	private Long id;
 	private String modelo;
 	private int anoFabricacao;
+	private String modeloMotor;
+	private String potenciaMotor;
+	private boolean estepe;
+	private int qntAssentos;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -42,6 +46,31 @@ public class Car implements BaseEntity {
 
 	public void setAnoFabricacao(int anoFabricacao) {
 		this.anoFabricacao = anoFabricacao;
+	}
+	
+	public String getModeloMotor() {
+		return modeloMotor;
+	}
+	public void setModeloMotor(String modeloMotor) {
+		this.modeloMotor = modeloMotor;
+	}
+	public String getPotenciaMotor() {
+		return potenciaMotor;
+	}
+	public void setPotenciaMotor(String potenciaMotor) {
+		this.potenciaMotor = potenciaMotor;
+	}
+	public boolean isEstepe() {
+		return estepe;
+	}
+	public void setEstepe(boolean estepe) {
+		this.estepe = estepe;
+	}
+	public int getQntAssentos() {
+		return qntAssentos;
+	}
+	public void setQntAssentos(int qntAssentos) {
+		this.qntAssentos = qntAssentos;
 	}
 	
 }
