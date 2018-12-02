@@ -1,20 +1,19 @@
-package br.com.wiki.app;
+package br.com.wikicar.app;
 
 import br.com.wikicar.dao.Dao;
-import br.com.wikicar.entities.Carro;
-import br.com.wikicar.entities.Pessoa;
+import br.com.wikicar.entities.*;
 
-public class InsertApplication {
+public class InsertApp {
 	
 	public static void main(String[] args) {
 		
-		Pessoa pessoa = new Pessoa();
-		Carro carro = new Carro();
+		//Person p = new Person();
+		Car c = new Car();
 		
-		Dao<Pessoa> daoPessoa = new Dao<Pessoa>();
-		Dao<Carro> daoCarro = new Dao<Carro>();
+		//Dao<Person> daoPerson = new Dao<Person>();
+		Dao<Car> daoCar = new Dao<Car>();
 		
-		
+		/*
 		pessoa.setNome("Raphael Neves");
 		pessoa.setIdade(28);
 		
@@ -24,6 +23,7 @@ public class InsertApplication {
 		daoPessoa.saveOrUpdate(pessoa);
 		daoCarro.saveOrUpdate(carro);
 		
+		*/
 		System.out.println("Entidades salvas com sucesso!");
 		
 	}

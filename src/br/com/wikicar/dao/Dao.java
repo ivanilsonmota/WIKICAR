@@ -2,10 +2,10 @@ package br.com.wikicar.dao;
 
 import javax.persistence.EntityManager;
 
-import br.com.wikicar.connection.ConnectionFactory;
-import br.com.wikicar.entities.EntidadeBase;
+import br.com.wikicar.conn.ConnectionFactory;
+import br.com.wikicar.entities.BaseEntity;
 
-public class Dao<T extends EntidadeBase> {
+public class Dao<T extends BaseEntity> {
 	
 	private static EntityManager manager = ConnectionFactory.getEntityManager();;
 	

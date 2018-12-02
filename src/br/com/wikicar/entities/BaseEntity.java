@@ -1,6 +1,6 @@
 package br.com.wikicar.entities;
 
 
-public interface EntidadeBase{
+public interface BaseEntity{
 	public Long getId();
 }

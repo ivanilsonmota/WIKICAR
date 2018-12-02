@@ -1,17 +1,17 @@
-package br.com.wiki.app;
+package br.com.wikicar.app;
 
 import br.com.wikicar.dao.*;
 import br.com.wikicar.entities.*;
 
-public class FindByIdApplication {
+public class FindByIdApp {
 	
 	public static void main(String[] args) {
 		
-		Dao<Pessoa> daoPessoa = new Dao<Pessoa>();
-		Dao<Carro> daoCarro = new Dao<Carro>();
+		Dao<Person> daoPessoa = new Dao<Person>();
+		Dao<Car> daoCarro = new Dao<Car>();
 		
-		Pessoa pessoa = daoPessoa.findById(Pessoa.class, 1L);
-		Carro carro = daoCarro.findById(Carro.class, 1L);
+		Person pessoa = daoPessoa.findById(Person.class, 1L);
+		Car carro = daoCarro.findById(Car.class, 1L);
 		
 		System.out.println("### Entidade Pessoa encontrada ###");
 		System.out.println("ID: " + pessoa.getId());

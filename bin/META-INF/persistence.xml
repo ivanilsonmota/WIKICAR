@@ -8,7 +8,7 @@
  
  <properties>
 	 <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-	 <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1/wikicar"></property>
+	 <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5432/wikicar"></property>
 	 <property name="javax.persistence.jdbc.user" value="postgres" />
 	 <property name="javax.persistence.jdbc.password" value="met1234" />
 	 <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
