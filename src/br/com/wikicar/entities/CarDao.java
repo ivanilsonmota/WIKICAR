@@ -8,12 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_car")
-public class Car extends Veiculo implements BaseEntity {
-	
+@Table(name="tb_carro")
+public class CarDao extends Vehicle implements BaseEntity {
 	private Long id;
 	private String modelo;
-	private int anoFabricacao;
 	private String modeloMotor;
 	private String potenciaMotor;
 	private boolean estepe;
@@ -21,7 +19,7 @@ public class Car extends Veiculo implements BaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id")
+	@Column(name="id_carro")
 	public Long getId() {
 		return id;
 	}
@@ -39,38 +37,42 @@ public class Car extends Veiculo implements BaseEntity {
 		this.modelo = modelo;
 	}
 	
-	@Column(name="ano_fabricacao")
-	public int getAnoFabricacao() {
-		return anoFabricacao;
-	}
-
-	public void setAnoFabricacao(int anoFabricacao) {
-		this.anoFabricacao = anoFabricacao;
-	}
 	
+	@Column(name="modelo_motor")
 	public String getModeloMotor() {
 		return modeloMotor;
 	}
+	
 	public void setModeloMotor(String modeloMotor) {
 		this.modeloMotor = modeloMotor;
 	}
+	
+	@Column(name="potencia_motor")
 	public String getPotenciaMotor() {
 		return potenciaMotor;
 	}
+	
 	public void setPotenciaMotor(String potenciaMotor) {
 		this.potenciaMotor = potenciaMotor;
 	}
+	
+	@Column(name="estepe")
 	public boolean isEstepe() {
 		return estepe;
 	}
+	
 	public void setEstepe(boolean estepe) {
 		this.estepe = estepe;
 	}
+	
+	@Column(name="qnt_assentos")
 	public int getQntAssentos() {
 		return qntAssentos;
 	}
+	
 	public void setQntAssentos(int qntAssentos) {
 		this.qntAssentos = qntAssentos;
 	}
+	
 	
 }

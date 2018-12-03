@@ -1,14 +1,14 @@
 package br.com.wikicar;
 
-import br.com.wikicar.dao.Dao;
-import br.com.wikicar.entities.Car;
+import br.com.wikicar.dao.GenericDao;
+import br.com.wikicar.entities.CarDao;
 
 
 public class Main {
 	public static void main(String[] args) {
 		
-		Car c = new Car();
-		Dao<Car> daoCar = new Dao<Car>();
+		CarDao c = new CarDao();
+		GenericDao<CarDao> daoCar = new GenericDao<CarDao>();
 		
 	}
 }

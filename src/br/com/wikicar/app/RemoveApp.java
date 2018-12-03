@@ -1,17 +1,17 @@
 package br.com.wikicar.app;
 
-import br.com.wikicar.dao.Dao;
-import br.com.wikicar.entities.Car;
-import br.com.wikicar.entities.Person;
+import br.com.wikicar.dao.GenericDao;
+import br.com.wikicar.entities.CarDao;
+import br.com.wikicar.entities.PersonDao;
 
 public class RemoveApp {
 	public static void main(String[] args) {
 		
-		Dao<Person> daoPerson = new Dao<Person>();
-		Dao<Car> daoCar = new Dao<Car>();
+		GenericDao<PersonDao> daoPerson = new GenericDao<PersonDao>();
+		GenericDao<CarDao> daoCar = new GenericDao<CarDao>();
 		
-		daoPerson.remove(Person.class, 1L);
-		daoCar.remove(Car.class, 1L);
+		daoPerson.remove(PersonDao.class, 1L);
+		daoCar.remove(CarDao.class, 1L);
 		
 		System.out.println("Entidades removidas com sucesso!");
 		

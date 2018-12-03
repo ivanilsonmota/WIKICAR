@@ -1,6 +1,6 @@
 package br.com.wikicar.entities;
 
-public class Carro extends Veiculo{
+public class Carro extends Vehicle{
 	protected String modeloMotor;
 	protected String potenciaMotor;
 	protected boolean estepe;

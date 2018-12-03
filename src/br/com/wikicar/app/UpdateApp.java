@@ -2,16 +2,16 @@ package br.com.wikicar.app;
 
 import javax.swing.JOptionPane;
 
-import br.com.wikicar.dao.Dao;
-import br.com.wikicar.entities.Person;
+import br.com.wikicar.dao.GenericDao;
+import br.com.wikicar.entities.PersonDao;
 
 public class UpdateApp {
 	
 	public static void main(String[] args) {
 		
-		Dao<Person> daoPerson = new Dao<Person>();
+		GenericDao<PersonDao> daoPerson = new GenericDao<PersonDao>();
 		
-		Person person = daoPerson.findById(Person.class, 1L);
+		PersonDao person = daoPerson.findById(PersonDao.class, 1L);
 		person.setNome("Raphael Oliveira Neves");
 		daoPerson.saveOrUpdate(person);
 		JOptionPane.showInputDialog("Entidade atualizada com sucesso.");

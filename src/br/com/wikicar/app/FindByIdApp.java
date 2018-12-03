@@ -7,11 +7,11 @@ public class FindByIdApp {
 	
 	public static void main(String[] args) {
 		
-		Dao<Person> daoPessoa = new Dao<Person>();
-		Dao<Car> daoCarro = new Dao<Car>();
+		GenericDao<PersonDao> daoPessoa = new GenericDao<PersonDao>();
+		GenericDao<CarDao> daoCarro = new GenericDao<CarDao>();
 		
-		Person pessoa = daoPessoa.findById(Person.class, 1L);
-		Car carro = daoCarro.findById(Car.class, 1L);
+		PersonDao pessoa = daoPessoa.findById(PersonDao.class, 1L);
+		CarDao carro = daoCarro.findById(CarDao.class, 1L);
 		
 		System.out.println("### Entidade Pessoa encontrada ###");
 		System.out.println("ID: " + pessoa.getId());

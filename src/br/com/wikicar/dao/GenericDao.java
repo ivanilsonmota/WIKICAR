@@ -5,7 +5,7 @@ import javax.persistence.EntityManager;
 import br.com.wikicar.conn.ConnectionFactory;
 import br.com.wikicar.entities.BaseEntity;
 
-public class Dao<T extends BaseEntity> {
+public class GenericDao<T extends BaseEntity> {
 	
 	private static EntityManager manager = ConnectionFactory.getEntityManager();;
 	

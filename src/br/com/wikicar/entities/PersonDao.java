@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_pessoa")
-public class Person implements BaseEntity {
+public class PersonDao implements BaseEntity {
 	
 	private Long id;
 	private String nome;
