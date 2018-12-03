@@ -16,15 +16,13 @@ public class InsertApp {
 		
 		c.setMarca("Chevrolet");
 		c.setModelo("Corsa GT");
-		c.setAnoLancamento(1987);
-		c.setAnoEncerramento(2002);
+		c.setAnoFabricacao(1987);
+		c.setPeriodoVenda(22);
 		c.setEstepe(true);
 		c.setModeloMotor("GTX 300");
 		c.setPotenciaMotor("700cv");
 		c.setPrecoLancamento(43000);
 		c.setPrecoAtual(25000);
-		c.setVendasInternacionais(200);
-		c.setVendasNacionais(100);
 		c.setQntAssentos(5);
 		c.setKmRodado(53200);
 		

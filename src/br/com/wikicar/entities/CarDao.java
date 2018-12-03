@@ -11,12 +11,15 @@ import javax.persistence.Table;
 @Table(name="tb_carro")
 public class CarDao extends Vehicle implements BaseEntity {
 	private Long id;
+	private String marca;
 	private String modelo;
 	private String modeloMotor;
 	private String potenciaMotor;
 	private boolean estepe;
-	private int qntAssentos;
-	
+	private double kmRodado;
+    private double precoAtual;
+    private double precoLancamento;
+		
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id_carro")
@@ -27,6 +30,17 @@ public class CarDao extends Vehicle implements BaseEntity {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+
+	@Column(name="marca")
+    public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
 	
 	@Column(name="modelo")
 	public String getModelo() {
@@ -64,15 +78,37 @@ public class CarDao extends Vehicle implements BaseEntity {
 	public void setEstepe(boolean estepe) {
 		this.estepe = estepe;
 	}
-	
-	@Column(name="qnt_assentos")
-	public int getQntAssentos() {
-		return qntAssentos;
+
+
+	@Column(name="km_rodado")
+	public double getKmRodado() {
+		return kmRodado;
 	}
 	
-	public void setQntAssentos(int qntAssentos) {
-		this.qntAssentos = qntAssentos;
+	public void setKmRodado(double kmRodado) {
+		this.kmRodado = kmRodado;
 	}
+	
+	@Column(name="preco_atual")
+	public double getPrecoAtual() {
+		return precoAtual;
+	}
+	
+	public void setPrecoAtual(double precoAtual) {
+		this.precoAtual = precoAtual;
+	}
+	
+	@Column(name="preco_lancamento")
+	public double getPrecoLancamento() {
+		return precoLancamento;
+	}
+	
+	public void setPrecoLancamento(double precoLancamento) {
+		this.precoLancamento = precoLancamento;
+	}
+	
+
+	
 	
 	
 }

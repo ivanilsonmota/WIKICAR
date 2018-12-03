@@ -10,5 +10,6 @@ public class Main {
 		CarDao c = new CarDao();
 		GenericDao<CarDao> daoCar = new GenericDao<CarDao>();
 		
+		
 	}
 }
